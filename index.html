@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>-->
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+<div class="load">
+    <i id='icon' class="fa fa-circle-o-notch fa-spin"></i>
+</div>
+<div class="header"><div style="width: 40%;height: 100%;float: right">
+    <div class="date"></div>
+    <div class="city">
+        <input type="text" id="cityname" placeholder="请输入城市...">
+        <i class="fa fa-search" id='search' aria-hidden="true"></i>
+        <div class="currentcity">
+    </div>
+
+
+    </div>
+</div>
+</div>
+
+<div class="main" >
+    <ul>
+        <li class="info today">
+            <!--<p>{{Data.today.city}}</p>-->
+            <div class="line1"></div>
+            <div class="line2">
+                <span class="temper"></span>
+                <div class="line2-right">
+                <span class="unit">℃</span>
+                <span class="weat"></span>
+                </div>
+            </div>
+            <div class="line3">
+                <p class="temper"></p>
+                <p class="weat"></p>
+                <p class="wind"></p>
+            </div>
+        </li>
+        <li class="info otherday">
+            <div class="line1"><p class="week"></p><p class="day"></p></div>
+            <div class="line2"></div>
+            <div class="line3"><p class="temper"></p>
+                <p class="weat"></p>
+                <p class="wind"></p></div></li>
+        <li class="info otherday">
+            <div class="line1"><p class="week"></p><p class="day"></p></div>
+            <div class="line2"></div>
+            <div class="line3"><p class="temper"></p>
+                <p class="weat"></p>
+                <p class="wind"></p></div></li>
+        <li class="info otherday">
+            <div class="line1"><p class="week"></p><p class="day"></p></div>
+            <div class="line2"></div>
+            <div class="line3"><p class="temper"></p>
+                <p class="weat"></p>
+                <p class="wind"></p></div></li>
+        <li class="info otherday">
+            <div class="line1"><p class="week"></p><p class="day"></p></div>
+            <div class="line2"></div>
+            <div class="line3"><p class="temper"></p>
+                <p class="weat"></p>
+                <p class="wind"></p></div></li>
+        <li class="info otherday">
+            <div class="line1"><p class="week"></p><p class="day"></p></div>
+            <div class="line2"></div>
+            <div class="line3"><p class="temper"></p>
+                <p class="weat"></p>
+                <p class="wind"></p></div></li>
+        <li class="info otherday">
+            <div class="line1"><p class="week"></p><p class="day"></p></div>
+            <div class="line2"></div>
+            <div class="line3"><p class="temper"></p>
+                <p class="weat"></p>
+                <p class="wind"></p></div></li>
+    </ul>
+</div>
+<div class="footer"></div>
+</body>
+</html>
