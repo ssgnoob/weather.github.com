@@ -65,7 +65,7 @@ function call(city) {
 
         type:'GET',
 
-        url:"http://v.juhe.cn/weather/index?format=2&cityname=' + city + '&key=5a568b49a8bb9ebd7f58dfa1eb9545b2&callback=JSON_CALLBACK',
+        url:'http://v.juhe.cn/weather/index?format=2&cityname=' + city + '&key=5a568b49a8bb9ebd7f58dfa1eb9545b2&callback=JSON_CALLBACK',
         dataType:'jsonp',//跨域所需
 
         //	jsonp:'callback',
