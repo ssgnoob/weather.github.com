@@ -96,7 +96,7 @@ function getdata(data) {
         var day=date.getDate()+i+1;
         $(".otherday .line1 .week:eq("+i+")").html(dateformat(date.getDay()+i+1));
         $(".otherday .line1 .day:eq("+i+")").html(date.getMonth()+1+"月"+day+"日");
-        var imgurl2='url(/weather/img/day/'+data.result.future[item].weather_id.fa+'.png)';
+        var imgurl2='url(/weather.github.com/img/day/'+data.result.future[item].weather_id.fa+'.png)';
         $(".otherday .line2:eq("+i+")").css('background',imgurl2);
         $(".otherday .line3 .temper:eq("+i+")").html(data.result.future[item].temperature);
         $(".otherday .line3 .weat:eq("+i+")").html(data.result.future[item].weather);
