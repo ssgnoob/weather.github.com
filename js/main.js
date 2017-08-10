@@ -90,7 +90,7 @@ function call(ip) {
 
 
 function getdata(data) {
-    var imgurl='url(/weather/img/day/'+data.result.today.weather_id.fa+'.png)';
+    var imgurl='url(/weather.github.com/img/day/'+data.result.today.weather_id.fa+'.png)';
     $(".today .line1").css("background",imgurl);
     $(".today .line2 .temper").html(data.result.sk.temp);
     $(".today .line2 .weat").html("湿度：<br>"+data.result.sk.humidity);
