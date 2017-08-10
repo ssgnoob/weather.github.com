@@ -27,23 +27,13 @@ app.controller('MainCtrl', function($scope, WeatherApi) {
 
 $(function () {
                 $(".load").css("display",'block');
-                $.ajax({
+                $.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js', function () {
+            var city = '';
+            city = remote_ip_info.city;
+                call(city);
 
-                    type:'GET',
+        });
 
-                    url:"http://ipinfo.io/json",
-                    dataType:'json',//跨域所需
-                    //jsonp:'callback',
-                    success:function(data){
-                        call(data.ip);
-                        $(".currentcity").html("当前城市:"+data.city);
-                    },
-                    error:function (data) {
-                        console.log(data);
-                    }
-
-
-                });
 
 
             $("#search").on("click",function () {
@@ -70,12 +60,12 @@ $(function () {
 });
 
 
-function call(ip) {
+function call(city) {
     $.ajax({
 
         type:'GET',
 
-        url:"http://v.juhe.cn/weather/ip?format=1&ip="+ip+"&key=5a568b49a8bb9ebd7f58dfa1eb9545b2&callback=JSON_CALLBACK",
+        url:"http://v.juhe.cn/weather/index?format=2&cityname=' + city + '&key=5a568b49a8bb9ebd7f58dfa1eb9545b2&callback=JSON_CALLBACK',
         dataType:'jsonp',//跨域所需
 
         //	jsonp:'callback',
