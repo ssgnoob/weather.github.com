@@ -30,6 +30,7 @@ $(function () {
                 $.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js', function () {
             var city = '';
             city = remote_ip_info.city;
+            $(".currentcity").html("当前城市:"+city);
                 call(city);
 
         });
